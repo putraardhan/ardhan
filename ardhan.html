@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Html Music Player</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #e91e63, #fffde7);
+}
+.player{
+    position: absolute;
+    top: 150px;
+    width: 250px;
+    background: #f1f3f4;
+    box-shadow: 0 90px 100px rgba(0, 0, 0, 0.5);
+}
+.player .imgBx{
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    z-index: 1;
+}
+.player .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.player audio{
+    width: 100%;
+    background: transparent;
+}
+audio{
+    position: absolute;
+    top: 400px;
+    width: 250px;
+    z-index: 2;
+    background-color: white;
+    margin: 0px -126px;
+}
+h2{
+    position: absolute;
+    top: 345px;
+    text-align: right;
+    z-index: 4;
+    color: white;
+    font-family: sans-serif;
+    font-size: 15px;
+    margin: 0px -110px;
+}
+.kotak{
+    position: absolute;
+    top: 340px;
+    width: 250px;
+    height: 60px;
+    background-color: black;
+    opacity: 0.4;
+    z-index: 3;
+}
+p{
+    position: absolute;
+    top: 370px;
+    padding-left: 50px;
+    z-index: 4;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    margin: 0px -160px;
+}
+h3{
+    position: absolute;
+    top: 200px;
+    text-align: right;
+    z-index: 4;
+    color: white;
+    font-family: sans-serif;
+    font-size: 10px;
+    margin: 0px -125px;
+    opacity: 0.5;
+}
+
+
+        </style>
+    </head>
+    <body>
+    <hr>
+    <div><h3>PROPERTI OF PUTRA DWI ARDHAN</h3></div>
+        <div><h2>Arcade</h2></div>
+        <div><p>"Ducan Laurence"</p></div>
+        <div class="player">
+            <div class="imgBx">
+                <img src="img.jpg">
+            </div>
+        </div>
+        <div>
+            <audio controls>
+                <source src="arcade.mp3" type="audio/mp3">
+            </audio>
+        </div>
+        <div class="kotak"></div>
+    </hr>
+    </body>
+</html>
