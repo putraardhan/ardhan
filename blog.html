@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <style type="text/css">
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans';
+
+}
+nav{
+    display: grid;
+    grid-template: 
+    'nav-links accounts';
+    width: 60%;
+    margin: auto;
+    margin-top: 3%;
+    grid-gap: 40px;
+}
+li{
+    list-style: none;
+    display: inline;
+    padding: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+li:hover{
+    font-weight: 600;
+}
+i{
+    margin-right: 10px;
+}
+i:hover{
+    transform:scale(1.3);
+}
+.header{
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+h1{
+    font-family: sans-serif;
+    font-size: 50px;
+}
+h2,h4,h5{
+    font-weight: 100;
+}
+hr{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+}
+.content-container{
+    display: grid;
+    grid-template-areas: 
+    'left-conten right-content';
+    width: 60%;
+    margin: auto;
+    grid-gap: 50px;
+    text-align: left;
+}
+.featured-article, .another-article{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.another-article, h3, p{
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+img{
+    height: 400px;
+    width: 700px;
+    margin-top: 20px;
+}
+.btn{
+    font-family: 'Open Sans';
+}
+.read-more-btn{
+    background-color: black;
+    background-size: 50px 50px;
+    border: none;
+    color: white;
+    float: right;
+    padding: 10px 20px 10px 20px;
+}
+.read-more-btn:hover{
+    background-color: #a9a9a9;
+}
+.right-content img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+}
+.author-caption{
+    font-family: 'Allura';
+    font-style: italic;
+    text-align: center;
+    font-size: 12px;
+
+}
+.newsletter{
+    margin-top: 10%;
+    border: 1px solid black;
+    padding: 25px 10px 25px 10px;
+    text-align: center;
+    grid-area: newsletter;
+}
+h5{
+    margin-bottom: 10%;
+
+}
+input[type = "email"]{
+    padding: 10px 20px 10px 20px;
+    outline: none;
+}
+::placeholder{
+    text-align: center;
+}
+.sub-btn{
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 70px 15px 70px;
+    margin-top: 5%;
+}
+.sub-btn:hover{
+    background-color: #a9a9a9;
+}
+.search{
+    margin-top: 20%;
+    text-align: center;
+    grid-area: search;
+}
+.search h5{
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+input[type = "text"]{
+    padding: 5px;
+    width: 80%;
+    outline: none;
+}
+.search-btn{
+    float: right;
+    padding: 5px 8px;
+    background-color: black;
+    border: none;
+    color: white;
+    font-size: 15px;
+}
+.search-btn:hover{
+    background-color: #a9a9a9;
+}
+.topics{
+    margin-top: 20%;
+    text-align: center;
+    grid-area: topics;
+}
+.topics h5{
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+.topics li{
+    text-transform: none;
+    display: block;
+    padding: 5px;
+    opacity: 0.8;
+}
+.popular-posts{
+    margin-top: 20%;
+    text-align: center;
+    grid-area: popular-post;
+}
+.popular-posts h5{
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+.popular-posts img{
+    height: 240px;
+    width: 220px;
+    border-radius: 0!important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3%;
+}
+.caption{
+    font-family: 'Allura';
+    font-style: italic;
+}
+footer{
+    margin-top: 3%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+.featured-article{
+    grid-area: featured-article;
+}
+.another-article{
+    grid-area: another-article;
+}
+.avatar-content{
+    grid-area: avatar-content;
+}
+@media(max-width:1027px){
+    nav{
+        grid-template-areas: 
+        'nav-links'
+        'accounts';
+        text-align: center;
+    }
+    .content-container{
+        grid-template-areas: 
+        'left-content'
+        'right-content';
+        width: 70%;
+        margin: auto;
+    }
+    hr{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2%;
+    }
+    .right-content{
+        display: grid;
+        grid-template-areas: 
+        'avatar content newsletter'
+        'searc topics';
+        grid-gap: 40px;
+    }
+    .newsletter{
+        margin-top: 0;
+    }
+    .popular-posts{
+        display: none;
+    }
+    .topics{
+        margin-top: 30px;
+    }
+    hr{
+        width: 90%;
+        margin-bottom: auto;
+        margin-right: auto;
+        margin-bottom: 2%;
+    }
+    .right-content{
+        display: grid;
+        grid-template-areas: 
+        'avatar-content newsletter'
+        'search topics';
+        grid-gap: 40px;
+    }
+    .newsletter{
+        margin-top: 0;
+    }
+    .popular-posts{
+     display: none;   
+    }
+    .topics{
+        margin-top: 30px;
+    }
+}
+@media(max-width:700px){
+    nav li{
+        display: block;
+    }
+    .content-container{
+        grid-template-areas: 
+        'left-content'
+        'right-content';
+        grid-gap: 40px;
+        width: 80%;
+        margin: auto;
+    }
+    hr{
+        width: 90%;
+        margin-bottom: auto;
+        margin-right: auto;
+        margin-bottom: 2%;
+    }
+    .left-content img{
+        height: 300px;
+        width: 400px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .right-content{
+        display: grid;
+        grid-template-areas: 
+        'avatar-content'
+        'newsletter'
+        'search'
+        'topics';
+        width: 50%;
+        margin: auto;
+    }
+    .newsletter, .topics, .search{
+        margin-top: 3%;
+    }
+}</style>
+</head>
+<body>
+    <nav>
+        <div class="nav-links">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Blog</li>
+                <li>Author</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        <div class="accounts">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-whatsapp"></i>
+            <i class="fab fa-telegram"></i>
+        </div>
+    </nav>
+    <section class="header">
+        <h1>Putra Ardhan</h1>
+        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repellat,</h4>
+    </section>
+    <hr>
+    <section class="content-container">
+        <div class="left-content">
+            <h2>Featured Article Goes Here</h2>
+            <div class="fetured-article">
+                <img src="img.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem laboriosam temporibus, deleniti doloremque corporis unde dolorum placeat quod atque quas, error illo tenetur provident quos aliquid molestiae, quam rem repellat!. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nulla minus saepe cum alias cupiditate exercitationem culpa architecto, facere itaque praesentium nesciunt consequatur eius dolore illo esse optio accusamus aliquam?</p>
+            </div>
+            <h3>Heading Goes Here</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repudiandae nesciunt similique libero tempora vitae eius officia sint alias odio minus provident quia quibusdam necessitatibus omnis, at saepe, repellendus fugiat.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis fuga dolore, aperiam dolorem quasi sit a ipsum similique. Quis eveniet consequatur, error quam tempora sapiente veritatis esse ex vero sit!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, aspernatur illo. Fugit recusandae nemo enim sed impedit illo, itaque fugiat reiciendis harum quaerat quam obcaecati possimus vero ullam eligendi laudantium!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto autem harum itaque ducimus tenetur nostrum! Possimus odio perferendis quasi nostrum unde ea non nemo fuga accusantium qui, rerum nulla aut!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi voluptatum, incidunt eveniet rem maiores exercitationem sint amet! Accusamus porro molestias libero a numquam provident, id iure deserunt, facere soluta iusto?
+            </p>
+            <div class="another-article">
+                <h3>Another Article</h3>
+                <img src="img-2.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit officiis distinctio aperiam animi eum sequi. Aliquam error ab sequi, necessitatibus quam optio? Molestiae quaerat fugit placeat! Cupiditate soluta provident quidem?</p>
+                <button class = "btn read-more-btn">Read More</button>
+            </div>
+        </div>
+        <div class="right-content">
+            <div class="avatar-content">
+                <img src="avatar.jpg" alt="">
+                <p class = "author-caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis libero perferendis repellendus cum corrupti magni minima, facere ullam laudantium. Nesciunt consequatur aliquid minus ut accusamus unde maiores at dolore earum?</p>
+            </div>
+            <div class="newsletter">
+                <h5>STAY UPDATED</h5>
+                <input type="email" name="" id="" placeholder="EMAIL ADDRESS">
+                <button class = "btn sub-btn">SUBSCRIBE</button>
+            </div>
+            <div class="search">
+                <h5>SEARCH</h5>
+                <input type="text" placeholder="LOOKING FOR?">
+                <button class = "search-btn">GO</button>
+            </div>
+            <div class="topics">
+                <h5>TOPICS</h5>
+                <ul>
+                    <li>Minimalism</li>
+                    <li>Travel</li>
+                    <li>Photograpy</li>
+                    <li>Life</li>
+                    <li>Family</li>
+                    <li>Books</li>
+                </ul>
+            </div>
+            <div class="popular-posts">
+                <h5>POPULAR POSTS</h5>
+                <img src="img-3.jpg" alt="">
+                <p class = "caption">A Lovely Caption</p>
+                <img src="img-4.jpg" alt="">
+                <p class = "caption">A Lovely Caption</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; All Right Reserved</p>
+    </footer>
+</body>
+</html>
