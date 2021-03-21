@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Membuat Daftar Tabel Keren Menggunakan HTML dan CSS</title>
+        <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #03a9f4,	#1E90FF);
+}
+.list
+{
+    position: relative;
+    background: #fff;
+    width: 350px;
+}
+.list h2
+{
+    background: #03a9f4;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: 600;
+}
+.list ul
+{
+    position: relative;
+    padding: 20px;
+}
+.list ul li
+{
+    position: relative;
+    list-style: none;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.list ul li:last-child
+{
+    border-bottom: none
+}
+.list ul li label
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer; 
+}
+.list ul li label input
+{
+    visibility: hidden;
+    appearance: none;
+}
+.list ul li label p
+{
+    position: absolute;
+    font-weight: 500;
+}
+.list ul li label span
+{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.list ul li label span::before
+{
+    content: '';
+    position: absolute;
+    top: 5px;
+    width: 10px;
+    height: 5px;
+    border-left: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    transform: rotate(-40deg);
+}
+.list ul li label input:checked ~ p
+{
+    text-decoration: line-through;
+    color: #ccc;
+}
+.list ul li label input:checked ~ span
+{
+    background: #03a9f4;
+    border: 1px solid #03a9f4;
+}
+.list ul li label input:checked ~ span::before
+{
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+        </style>
+    </head>
+<body>
+    <div class="list">
+        <h2>Daftar Kegiatan</h2>
+        <ul>
+            <li>
+                <label>
+                    <input type="checkbox" name="">
+                    <p>Makan</p>
+                    <span></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" name="">
+                    <p>Rebahan</p>
+                    <span></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" name="">
+                    <p>Tidur</p>
+                    <span></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" name="">
+                    <p>Diomelin Emak</p>
+                    <span></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" name="">
+                    <p>Broken Home</p>
+                    <span></span>
+                </label>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
